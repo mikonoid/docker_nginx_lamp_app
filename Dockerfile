@@ -1,5 +1,5 @@
 FROM ubuntu:trusty
-MAINTAINER Mike Ivanov
+MAINTAINER Mike Ivanov mikonoid@gmail.com
 #nginx_reverse_proxy+lamp stack+php_app
 
 # Install all packages
