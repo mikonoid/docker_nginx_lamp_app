@@ -1,7 +1,7 @@
 node {
-    docker.withRegistry('https://index.docker.io/v1/', 'docker-hub-credentials') {
+    docker.withRegistry('https://index.docker.io/v1/', 'mk51-dockerhub') {
     
-        git url: "https://github.com/mikonoid/docker_nginx_lamp_app", credentialsId: 'none'
+        git url: "https://github.com/mikonoid/docker_nginx_lamp_app", credentialsId: 'mk51-dockerhub'
     
         sh "git rev-parse HEAD > .git/commit-id"
         def commit_id = readFile('.git/commit-id').trim()
