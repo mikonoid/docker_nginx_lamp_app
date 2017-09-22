@@ -1,4 +1,4 @@
-node("docker") {
+node("jenkins") {
     docker.withRegistry('docker.io', 'docker-hub-credentials') {
     
         git url: "https://github.com/mikonoid/docker_nginx_lamp_app", credentialsId: 'none'
