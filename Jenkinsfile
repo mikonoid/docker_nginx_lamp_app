@@ -8,7 +8,7 @@ node("docker") {
         println commit_id
     
         stage "build"
-        def app = docker.build "your-project-name"
+        def app = docker.build "nginx_lamp_app"
     
         stage "publish"
         app.push 'master'
