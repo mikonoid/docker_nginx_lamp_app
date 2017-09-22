@@ -1,5 +1,5 @@
 node {
-    docker.withRegistry('none', '1690dbce-a0e7-4024-8aa3-ed6bcc000cac') {
+    docker.withRegistry('', '1690dbce-a0e7-4024-8aa3-ed6bcc000cac') {
     
         git url: "https://github.com/mikonoid/docker_nginx_lamp_app", credentialsId: 'none'
     
