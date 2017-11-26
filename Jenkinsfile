@@ -1,5 +1,5 @@
 node {
-     docker.withRegistry('mk51/docker_nginx_lamp_app', '11')
+     docker.withRegistry('http://index.docker.io/', '11')
 {
     
         git url: "https://github.com/mikonoid/docker_nginx_lamp_app", credentialsId: 'none'
