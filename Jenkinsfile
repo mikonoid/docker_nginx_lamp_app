@@ -18,5 +18,6 @@ node {
         stage "run docker container"
         docker.image('nginx_lamp_app').withRun {c ->
         sh './test-nginx_lamp_app'
+        }
     }
 }
