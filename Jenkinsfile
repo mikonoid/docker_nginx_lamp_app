@@ -14,5 +14,9 @@ node {
         stage "publish"
         app.push 'master'
         app.push "${commit_id}"
+     
+        stage "run docker container"
+        docker.image('nginx_lamp_app').withRun {c ->
+        sh './test-nginx_lamp_app'
     }
 }
