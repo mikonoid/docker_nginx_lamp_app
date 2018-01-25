@@ -14,7 +14,7 @@ node {
         
         stage "run docker container"
         docker.image('nginx_lamp_app').withRun {c ->
-        sh 'docker run -i -t nginx_lamp_app'
+        sh 'docker run -d -p 80:80 -p 3306:3306 nginx_lamp_app'
        }
      
 
