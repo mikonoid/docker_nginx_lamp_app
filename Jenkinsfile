@@ -9,8 +9,7 @@ node {
         println commit_id
     
         docker.build('nginx_lamp_app').inside("--volume=/var/run/docker.sock:/var/run/docker.sock") {  
-        stage "build"
-        def app = docker.build "nginx_lamp_app"
+        
           }
     
         
