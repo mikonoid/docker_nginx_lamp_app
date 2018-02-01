@@ -8,9 +8,8 @@ node {
         def commit_id = readFile('.git/commit-id').trim()
         println commit_id
     
-        docker.build('nginx_lamp_app').inside("--volume=/var/run/docker.sock:/var/run/docker.sock") {  
-        
-          }
+        stage "build"
+        def app = docker.build "nginx_lamp_app"
           
         stage "run docker container"
         docker.image('nginx_lamp_app').withRun {c ->
